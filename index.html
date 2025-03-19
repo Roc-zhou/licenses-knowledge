@@ -3,7 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>开源协议知识库</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>开源协议知识库 - 最全面的开源许可证指南</title>
+    <meta name="description" content="全面详细的开源许可证指南，包括MIT、GPL、Apache等常用开源协议的中文说明、使用条件和注意事项。帮助开发者选择合适的开源协议。">
+    <meta name="keywords" content="开源协议,开源许可证,MIT许可证,GPL,Apache许可证,BSD,LGPL,MPL,开源软件,软件许可">
+    <meta name="author" content="开源协议知识库">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-domain.com/">
+    <meta property="og:title" content="开源协议知识库 - 最全面的开源许可证指南">
+    <meta property="og:description" content="全面详细的开源许可证指南，包括MIT、GPL、Apache等常用开源协议的中文说明、使用条件和注意事项。">
+    <meta property="og:image" content="https://your-domain.com/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://your-domain.com/">
+    <meta property="twitter:title" content="开源协议知识库 - 最全面的开源许可证指南">
+    <meta property="twitter:description" content="全面详细的开源许可证指南，包括MIT、GPL、Apache等常用开源协议的中文说明、使用条件和注意事项。">
+    <meta property="twitter:image" content="https://your-domain.com/twitter-image.jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://your-domain.com/">
+
+    <!-- Robots Meta -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+
+    <!-- Mobile App Meta -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="开源协议知识库">
+    <meta name="theme-color" content="#ffffff">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome -->
@@ -53,6 +86,53 @@
             to { opacity: 1; }
         }
     </style>
+
+    <!-- 结构化数据 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "开源协议知识库",
+        "description": "全面详细的开源许可证指南，包括各种常用开源协议的中文说明和使用条件",
+        "url": "https://your-domain.com",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://your-domain.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{
+            "@type": "Question",
+            "name": "什么是MIT许可证？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "MIT许可证是最简单和宽松的开源协议，允许用户自由使用、修改和分发代码，只需保留版权声明和许可证声明。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "GPL许可证有什么特点？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "GPL是一个强制开源协议，要求任何修改和衍生品都必须以相同协议开源，具有传染性条款。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Apache许可证与MIT许可证有什么区别？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Apache许可证比MIT许可证更详细，包含专利授权条款，提供更多法律保护，适用于商业软件。"
+            }
+        }]
+    }
+    </script>
 </head>
 <body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300 min-h-screen flex flex-col">
     <!-- 导航栏 -->
