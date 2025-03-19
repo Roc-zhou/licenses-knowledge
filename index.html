@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开源协议知识库</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script>
+        // 配置 Tailwind 深色模式
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        
+        .license-card {
+            transition: all 0.3s ease;
+        }
+        
+        .license-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300 min-h-screen flex flex-col">
+    <!-- 导航栏 -->
+    <nav class="bg-white dark:bg-gray-800 shadow-lg fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <i class="fas fa-book-open text-blue-600 dark:text-blue-400 text-2xl"></i>
+                    <span class="ml-2 text-xl font-semibold text-gray-900 dark:text-white">开源协议知识库</span>
+                </div>
+                <div class="flex items-center">
+                    <button id="darkModeToggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+                        <i class="fas fa-moon dark:text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <main class="pt-20 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex-grow">
+        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-8 text-center fade-in">
+            常用开源协议指南
+        </h1>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- MIT License -->
+            <div class="license-card bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 fade-in">
+                <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center justify-between">
+                    <span class="flex items-center">
+                        <i class="fas fa-file-contract text-blue-600 dark:text-blue-400 mr-2"></i>
+                        MIT 许可证
+                    </span>
+                    <span class="text-sm text-gray-500 dark:text-gray-400">MIT License</span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">
+                    最简单和宽松的开源协议，允许用户自由使用、修改和分发代码，只需保留版权声明和许可证声明。
+                </p>
+                <div class="space-y-2">
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">可以商业使用</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">可以修改</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">可以分发</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Apache License -->
+            <div class="license-card bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 fade-in">
+                <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center justify-between">
+                    <span class="flex items-center">
+                        <i class="fas fa-shield-alt text-blue-600 dark:text-blue-400 mr-2"></i>
+                        Apache 许可证
+                    </span>
+                    <span class="text-sm text-gray-500 dark:text-gray-400">Apache License 2.0</span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">
+                    适用于商业软件的开源协议，包含专利授权条款，提供更多法律保护。
+                </p>
+                <div class="space-y-2">
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">专利保护</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">商标权保护</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-exclamation-triangle text-yellow-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">需要保留声明</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GPL License -->
+            <div class="license-card bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 fade-in">
+                <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center justify-between">
+                    <span class="flex items-center">
+                        <i class="fas fa-copy text-blue-600 dark:text-blue-400 mr-2"></i>
+                        GPL 许可证
+                    </span>
+                    <span class="text-sm text-gray-500 dark:text-gray-400">GNU GPL v3</span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">
+                    强制开源协议，要求任何修改和衍生品都必须以相同协议开源。
+                </p>
+                <div class="space-y-2">
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">保护开源精神</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-exclamation-triangle text-yellow-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">必须开源</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-exclamation-triangle text-yellow-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">传染性条款</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BSD License -->
+            <div class="license-card bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 fade-in">
+                <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center justify-between">
+                    <span class="flex items-center">
+                        <i class="fas fa-layer-group text-blue-600 dark:text-blue-400 mr-2"></i>
+                        BSD 许可证
+                    </span>
+                    <span class="text-sm text-gray-500 dark:text-gray-400">BSD License</span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">
+                    类似MIT的宽松许可证，但有多个变体（2条款、3条款、4条款），对许可证和版权信息的展示有不同要求。
+                </p>
+                <div class="space-y-2">
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">商业友好</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">可再发布</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-exclamation-triangle text-yellow-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">需保留版权声明</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LGPL License -->
+            <div class="license-card bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 fade-in">
+                <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center justify-between">
+                    <span class="flex items-center">
+                        <i class="fas fa-code-branch text-blue-600 dark:text-blue-400 mr-2"></i>
+                        LGPL 许可证
+                    </span>
+                    <span class="text-sm text-gray-500 dark:text-gray-400">GNU LGPL v3</span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">
+                    GPL的宽松版本，允许非开源软件使用LGPL软件库，但对库的修改必须开源。
+                </p>
+                <div class="space-y-2">
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">可闭源调用</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-exclamation-triangle text-yellow-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">库修改需开源</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-info-circle text-blue-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">动态链接友好</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mozilla Public License -->
+            <div class="license-card bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 fade-in">
+                <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center justify-between">
+                    <span class="flex items-center">
+                        <i class="fas fa-fire text-blue-600 dark:text-blue-400 mr-2"></i>
+                        MPL 许可证
+                    </span>
+                    <span class="text-sm text-gray-500 dark:text-gray-400">Mozilla Public License 2.0</span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">
+                    Mozilla开发的开源协议，采用文件级别的copyleft，允许与专有软件混合使用。
+                </p>
+                <div class="space-y-2">
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">文件级开源</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">专利保护</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-exclamation-triangle text-yellow-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">修改需开源</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Eclipse Public License -->
+            <div class="license-card bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 fade-in">
+                <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center justify-between">
+                    <span class="flex items-center">
+                        <i class="fas fa-sun text-blue-600 dark:text-blue-400 mr-2"></i>
+                        EPL 许可证
+                    </span>
+                    <span class="text-sm text-gray-500 dark:text-gray-400">Eclipse Public License 2.0</span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">
+                    Eclipse基金会的开源协议，注重商业友好性，包含专利授权和责任限制条款。
+                </p>
+                <div class="space-y-2">
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">商业友好</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">专利保护</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-balance-scale text-purple-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">责任限制</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Artistic License -->
+            <div class="license-card bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 fade-in">
+                <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center justify-between">
+                    <span class="flex items-center">
+                        <i class="fas fa-palette text-blue-600 dark:text-blue-400 mr-2"></i>
+                        Artistic 许可证
+                    </span>
+                    <span class="text-sm text-gray-500 dark:text-gray-400">Artistic License 2.0</span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">
+                    Perl语言常用的许可证，强调保持软件艺术完整性，允许商业使用但有特殊要求。
+                </p>
+                <div class="space-y-2">
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">允许商业使用</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-exclamation-triangle text-yellow-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">修改需说明</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-paint-brush text-pink-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">保护作品完整性</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ISC License -->
+            <div class="license-card bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 fade-in">
+                <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center justify-between">
+                    <span class="flex items-center">
+                        <i class="fas fa-feather text-blue-600 dark:text-blue-400 mr-2"></i>
+                        ISC 许可证
+                    </span>
+                    <span class="text-sm text-gray-500 dark:text-gray-400">ISC License</span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">
+                    功能上等同于MIT许可证的简化版本，由ISC（Internet Systems Consortium）开发。
+                </p>
+                <div class="space-y-2">
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">简单明了</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">商业友好</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">兼容GPL</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AGPL License -->
+            <div class="license-card bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 fade-in">
+                <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center justify-between">
+                    <span class="flex items-center">
+                        <i class="fas fa-cloud text-blue-600 dark:text-blue-400 mr-2"></i>
+                        AGPL 许可证
+                    </span>
+                    <span class="text-sm text-gray-500 dark:text-gray-400">GNU AGPL v3</span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">
+                    针对网络服务的GPL变体，要求通过网络提供服务的软件也必须开源。
+                </p>
+                <div class="space-y-2">
+                    <div class="flex items-center">
+                        <i class="fas fa-exclamation-triangle text-yellow-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">网络服务需开源</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-exclamation-triangle text-yellow-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">最严格的开源要求</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">保护云服务开源</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Unlicense -->
+            <div class="license-card bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 fade-in">
+                <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center justify-between">
+                    <span class="flex items-center">
+                        <i class="fas fa-unlock text-blue-600 dark:text-blue-400 mr-2"></i>
+                        无许可证
+                    </span>
+                    <span class="text-sm text-gray-500 dark:text-gray-400">The Unlicense</span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">
+                    完全放弃版权的公共领域声明，允许任何人以任何方式使用代码。
+                </p>
+                <div class="space-y-2">
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">无限制使用</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">无需署名</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-exclamation-triangle text-yellow-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">无法律保护</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CC0 License -->
+            <div class="license-card bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 fade-in">
+                <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center justify-between">
+                    <span class="flex items-center">
+                        <i class="fas fa-creative-commons text-blue-600 dark:text-blue-400 mr-2"></i>
+                        CC0 许可证
+                    </span>
+                    <span class="text-sm text-gray-500 dark:text-gray-400">Creative Commons Zero v1.0</span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">
+                    Creative Commons的无版权声明，作者放弃所有权利，作品进入公共领域。
+                </p>
+                <div class="space-y-2">
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">完全自由</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">国际认可</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-info-circle text-blue-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">适合数据共享</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Zlib License -->
+            <div class="license-card bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 fade-in">
+                <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center justify-between">
+                    <span class="flex items-center">
+                        <i class="fas fa-compress-alt text-blue-600 dark:text-blue-400 mr-2"></i>
+                        Zlib 许可证
+                    </span>
+                    <span class="text-sm text-gray-500 dark:text-gray-400">zlib License</span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">
+                    简单宽松的许可证，源自zlib压缩库，允许自由使用但要求保留版权声明。
+                </p>
+                <div class="space-y-2">
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">商业友好</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-exclamation-triangle text-yellow-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">修改需说明</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">可私有分发</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Boost Software License -->
+            <div class="license-card bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 fade-in">
+                <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center justify-between">
+                    <span class="flex items-center">
+                        <i class="fas fa-rocket text-blue-600 dark:text-blue-400 mr-2"></i>
+                        Boost 许可证
+                    </span>
+                    <span class="text-sm text-gray-500 dark:text-gray-400">Boost Software License 1.0</span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">
+                    为Boost库设计的许可证，类似MIT但更简洁，允许用于闭源软件且不要求保留声明。
+                </p>
+                <div class="space-y-2">
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">极其宽松</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">源码可选择性公开</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">二进制分发友好</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WTFPL License -->
+            <div class="license-card bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 fade-in">
+                <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center justify-between">
+                    <span class="flex items-center">
+                        <i class="fas fa-grin-tears text-blue-600 dark:text-blue-400 mr-2"></i>
+                        WTFPL 许可证
+                    </span>
+                    <span class="text-sm text-gray-500 dark:text-gray-400">Do What The F* You Want To</span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">
+                    最自由的许可证之一，允许使用者做任何想做的事，没有任何限制。
+                </p>
+                <div class="space-y-2">
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">完全自由</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">无任何限制</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-exclamation-triangle text-yellow-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">不建议商用</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PostgreSQL License -->
+            <div class="license-card bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 fade-in">
+                <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center justify-between">
+                    <span class="flex items-center">
+                        <i class="fas fa-database text-blue-600 dark:text-blue-400 mr-2"></i>
+                        PostgreSQL 许可证
+                    </span>
+                    <span class="text-sm text-gray-500 dark:text-gray-400">PostgreSQL License</span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">
+                    类MIT许可证，专为PostgreSQL数据库设计，允许自由使用、修改和分发。
+                </p>
+                <div class="space-y-2">
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">商业友好</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">允许闭源</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-info-circle text-blue-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">适合企业使用</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Python Software Foundation License -->
+            <div class="license-card bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 fade-in">
+                <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center justify-between">
+                    <span class="flex items-center">
+                        <i class="fab fa-python text-blue-600 dark:text-blue-400 mr-2"></i>
+                        PSF 许可证
+                    </span>
+                    <span class="text-sm text-gray-500 dark:text-gray-400">Python Software Foundation</span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">
+                    Python及其标准库使用的许可证，允许自由使用但需保留版权声明。
+                </p>
+                <div class="space-y-2">
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">兼容GPL</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">商业友好</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-exclamation-triangle text-yellow-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">需保留声明</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Academic Free License -->
+            <div class="license-card bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 fade-in">
+                <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center justify-between">
+                    <span class="flex items-center">
+                        <i class="fas fa-graduation-cap text-blue-600 dark:text-blue-400 mr-2"></i>
+                        AFL 许可证
+                    </span>
+                    <span class="text-sm text-gray-500 dark:text-gray-400">Academic Free License 3.0</span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">
+                    专为学术和研究项目设计的许可证，包含专利授权和商标使用条款。
+                </p>
+                <div class="space-y-2">
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">专利保护</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">学术友好</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-exclamation-triangle text-yellow-500 mr-2"></i>
+                        <span class="text-gray-700 dark:text-gray-300">不兼容GPL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-white dark:bg-gray-800 shadow-lg w-full">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-gray-600 dark:text-gray-300">
+                <p>© 2024 开源协议知识库. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 深色模式切换
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const html = document.documentElement;
+        
+        // 检查用户偏好
+        if (localStorage.theme === 'dark') {
+            html.classList.add('dark');
+        }
+        
+        darkModeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light';
+        });
+
+        // 添加滚动动画
+        const cards = document.querySelectorAll('.license-card');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        cards.forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html> 
